@@ -1,0 +1,47 @@
+:root {
+    /* 🎨 Colors (from Figma / OnlineLoans design) */
+    --color-primary: #0044cc;
+    --color-secondary: #00aeef;
+    --color-success: #22c55e;
+    --color-warning: #f59e0b;
+    --color-danger: #ef4444;
+  
+    --color-background: #eff7ff; /* Figma hero background */
+    --color-surface: #ffffff;
+    --color-text-primary: #1e293b;
+    --color-text-secondary: #475569;
+    --color-border: #e2e8f0;
+  
+    /* 🧱 Layout */
+    --container-max-width: 1200px;
+    --border-radius: 12px;
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
+  
+    /* 🧩 Typography */
+    --font-family-base: "TikTok Sans", "Inter", sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+  
+    /* 📱 Breakpoints */
+    --bp-mobile: 480px;
+    --bp-tablet: 768px;
+    --bp-desktop: 1024px;
+  }
+  
+  /* 🌙 Optional dark mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-background: #0f172a;
+      --color-surface: #1e293b;
+      --color-text-primary: #f1f5f9;
+      --color-text-secondary: #94a3b8;
+    }
+  }
+  
