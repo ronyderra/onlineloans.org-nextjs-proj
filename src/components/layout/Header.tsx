@@ -17,9 +17,9 @@ const Header = () => {
   };
 
   const navigationLinks = [
-    { href: '/loans', label: 'Loans' },
+    { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
-    { href: '/how-it-works', label: 'How It Works' },
+    { href: '/Partner-with-us', label: 'Partner with us' },
     { href: '/contact', label: 'Contact' },
   ];
 
@@ -28,10 +28,14 @@ const Header = () => {
       <div className={styles.container}>
         {/* Logo */}
         <Link href="/" className={styles.logo} onClick={closeMobileMenu}>
-          <div className={styles.logoContainer}>
-            <span className={styles.logoText}>OnlineLoans</span>
-            <span className={styles.logoDomain}>.org</span>
-          </div>
+          <Image
+            src="/images/logo/onlineloans-logo.svg"
+            alt="OnlineLoans.org - Fast & Secure Online Loans"
+            width={180}
+            height={40}
+            className={styles.logoImage}
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -45,14 +49,6 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          <div className={styles.ctaButtons}>
-            <Link href="/login" className={styles.loginButton}>
-              Login
-            </Link>
-            <Link href="/apply" className={styles.applyButton}>
-              Apply Now
-            </Link>
-          </div>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -86,22 +82,6 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          <div className={styles.mobileCtaButtons}>
-            <Link 
-              href="/login" 
-              className={styles.mobileLoginButton}
-              onClick={closeMobileMenu}
-            >
-              Login
-            </Link>
-            <Link 
-              href="/apply" 
-              className={styles.mobileApplyButton}
-              onClick={closeMobileMenu}
-            >
-              Apply Now
-            </Link>
-          </div>
         </nav>
       </div>
 

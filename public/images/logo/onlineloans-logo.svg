@@ -1,0 +1,14 @@
+<svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="20" cy="20" r="18" fill="#0044cc" stroke="#00aeef" stroke-width="2"/>
+  
+  <!-- Dollar sign icon -->
+  <text x="20" y="26" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">$</text>
+  
+  <!-- Company name -->
+  <text x="50" y="16" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0044cc">OnlineLoans</text>
+  <text x="50" y="28" font-family="Arial, sans-serif" font-size="10" font-weight="normal" fill="#475569">.org</text>
+  
+  <!-- Decorative line -->
+  <line x1="50" y1="32" x2="170" y2="32" stroke="#00aeef" stroke-width="1" opacity="0.6"/>
+</svg>

@@ -21,28 +21,19 @@
 /* Logo Styles */
 .logo {
   text-decoration: none;
-  color: var(--color-text-primary);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-xl);
   transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
 }
 
 .logo:hover {
   opacity: 0.8;
 }
 
-.logoContainer {
-  display: flex;
-  align-items: baseline;
-}
-
-.logoText {
-  color: var(--color-primary);
-}
-
-.logoDomain {
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-lg);
+.logoImage {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Desktop Navigation */
@@ -93,42 +84,6 @@
   width: 100%;
 }
 
-/* CTA Buttons */
-.ctaButtons {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.loginButton {
-  text-decoration: none;
-  color: var(--color-text-primary);
-  font-weight: var(--font-weight-medium);
-  padding: 0.5rem 1rem;
-  border-radius: var(--border-radius);
-  transition: background-color 0.2s ease;
-}
-
-.loginButton:hover {
-  background-color: var(--color-background);
-}
-
-.applyButton {
-  text-decoration: none;
-  background: var(--color-primary);
-  color: white;
-  font-weight: var(--font-weight-medium);
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius);
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 68, 204, 0.2);
-}
-
-.applyButton:hover {
-  background: #0033aa;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0, 68, 204, 0.3);
-}
 
 /* Mobile Menu Button */
 .mobileMenuButton {
@@ -226,48 +181,6 @@
   color: var(--color-primary);
 }
 
-.mobileCtaButtons {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--color-border);
-}
-
-.mobileLoginButton {
-  text-decoration: none;
-  color: var(--color-text-primary);
-  font-weight: var(--font-weight-medium);
-  padding: 0.75rem 1rem;
-  text-align: center;
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
-  transition: all 0.2s ease;
-}
-
-.mobileLoginButton:hover {
-  background-color: var(--color-background);
-  border-color: var(--color-primary);
-}
-
-.mobileApplyButton {
-  text-decoration: none;
-  background: var(--color-primary);
-  color: white;
-  font-weight: var(--font-weight-medium);
-  padding: 0.75rem 1rem;
-  text-align: center;
-  border-radius: var(--border-radius);
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 68, 204, 0.2);
-}
-
-.mobileApplyButton:hover {
-  background: #0033aa;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0, 68, 204, 0.3);
-}
 
 .mobileMenuOverlay {
   position: fixed;
@@ -302,12 +215,8 @@
 
 /* Focus styles for accessibility */
 .navLink:focus,
-.loginButton:focus,
-.applyButton:focus,
 .mobileMenuButton:focus,
-.mobileNavLink:focus,
-.mobileLoginButton:focus,
-.mobileApplyButton:focus {
+.mobileNavLink:focus {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
