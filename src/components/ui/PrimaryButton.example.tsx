@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import PrimaryButton from './PrimaryButton';
+import SecondaryButton from './SecondaryButton';
 
 // Example usage of PrimaryButton component
 const PrimaryButtonExamples = () => {
@@ -22,9 +22,9 @@ const PrimaryButtonExamples = () => {
 
       {/* Basic Usage */}
       <div>
-        <PrimaryButton onClick={handleClick}>
-          See your loan options
-        </PrimaryButton>
+        <SecondaryButton onClick={handleClick}>
+        Go Back
+        </SecondaryButton>
       </div>
     </div>
   );

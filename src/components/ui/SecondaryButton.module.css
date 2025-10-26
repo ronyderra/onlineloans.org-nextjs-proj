@@ -1,0 +1,40 @@
+/* Base Button Styles */
+.button {
+display: flex;
+padding: 1.25rem 3rem;
+justify-content: center;
+align-items: center;
+border-radius: 3rem;
+border: 1px solid #5EC189;
+background-color: #FFF;
+box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.04);
+color: #5EC189;
+font-family: Poppins;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+/* Hover State */
+.button:hover {
+border-radius: 3rem;
+border: 1px solid #5EC189;
+background: rgba(94, 193, 137, 0.10);
+box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+
+/* Focus State */
+.button:focus {
+border-radius: 3rem;
+border: 1px solid #399963;
+background: #399963;
+box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.04);
+color: #FFF;
+font-family: Poppins;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
