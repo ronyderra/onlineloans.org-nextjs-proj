@@ -29,7 +29,7 @@ const Header = () => {
         {/* Logo */}
         <Link href="/" className={styles.logo} onClick={closeMobileMenu}>
           <Image
-            src="/images/logo/onlineloans-logo.svg"
+            src="/images/logo/onlineloans-logo.png"
             alt="OnlineLoans.org - Fast & Secure Online Loans"
             width={180}
             height={40}
