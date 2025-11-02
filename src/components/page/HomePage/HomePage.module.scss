@@ -4,18 +4,21 @@
 }
 
 .main {
-  display: grid;
-  grid-template-areas:
-    'A A A A B B B B'
-    'A A A A B B B B'
-    'C C C C B B B B';
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: var(--max-container-width);
+  margin: 0 auto;
+  padding: 120px 20px;
 }
 
 .title {
-  grid-area: A;
+  order: 1;
   font-size: 64px;
   font-weight: 700;
-  line-height: 100%;
+  line-height: 120%;
 
   @media (width <= 1024px) {
     font-size: 48px;
@@ -26,14 +29,17 @@
   }
 }
 
-.input {
-  grid-area: B;
+.tabs {
+  order: 2;
+  width: 100%;
+  max-width: 580px;
+  padding: 24px 0;
 }
 
 .ratings {
   display: flex;
-  grid-area: C;
   gap: 32px;
+  order: 3;
 }
 
 .ratingBlock {
@@ -41,8 +47,7 @@
   align-items: center;
   justify-content: center;
 
-  width: 100%;
-  max-width: 330px;
+  width: 330px;
   height: 54px;
   padding: 8px 15px;
   border-radius: 8px;
@@ -86,4 +91,40 @@
       line-height: 100%;
     }
   }
+}
+
+.creditNotes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+
+  padding-top: 24px;
+
+  .amountInfo {
+    display: flex;
+    gap: 48px;
+    font-size: 16px;
+    color: var(--color-secondary-4);
+  }
+}
+
+.note {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.protection {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+
+  font-size: 10px;
+  line-height: 100%;
+  color: #40404080;
 }

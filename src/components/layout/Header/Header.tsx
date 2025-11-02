@@ -14,6 +14,7 @@ const headerConfig = [
   {
     title: 'Home',
     path: '/',
+    pathMatch: ['/business', '/personal', '/'],
   },
   {
     title: 'About',
@@ -59,13 +60,17 @@ export const Header: FC = () => {
         </button>
         <ul className={classNames(cls.navList, { [cls.open]: isOpen })}>
           {headerConfig.map((item) => {
+            const isActive = item.pathMatch
+              ? item.pathMatch.includes(path)
+              : path === item.path;
+
             return (
               <li key={item.path} className={cls.navItem} onClick={toggleMenu}>
                 <AppLink
                   isWithHover
                   href={item.path}
                   className={cls.navLink}
-                  isActive={path === item.path}
+                  isActive={isActive}
                 >
                   {item.title}
                 </AppLink>

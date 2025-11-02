@@ -20,7 +20,44 @@ export default function HomePage({ type }: IHomePageProps) {
           Money when you need it. <br />
           Fast, easy, secure.
         </h1>
-        <AmountInputCard />
+        <div className={cls.tabs}>
+          <AmountInputCard
+            maxAmountLabel={isBusiness ? 'Up to $1M' : 'Up to $50K'}
+          />
+          <div className={cls.creditNotes}>
+            <div className={cls.amountInfo}>
+              <p className={cls.note}>
+                <Image
+                  src="/images/icons/features/onlineloans-fast-approval-lightning-icon.svg"
+                  alt="OnlineLoans.org - Rate in 1 minute"
+                  width={24}
+                  height={24}
+                />
+                Rate in 1 minute
+              </p>
+              <p className={cls.note}>
+                <Image
+                  src="/images/icons/features/onlineloans-verified-badge-icon.svg"
+                  alt="OnlineLoans.org - No impact to your credit"
+                  width={24}
+                  height={24}
+                />
+                No impact to your credit
+              </p>
+            </div>
+            <p className={cls.protection}>
+              <Image
+                src="/images/icons/security/onlineloans-secure-encryption-icon.svg"
+                alt="OnlineLoans.org - security"
+                width={24}
+                height={24}
+              />
+              We protect your information with advanced data encryption, keeping
+              your details safe so you can request a loan with peace of mind and
+              comfort from home.
+            </p>
+          </div>
+        </div>
         <div className={cls.ratings}>
           <div className={classNames(cls.ratingBlock, {}, [cls.product])}>
             <Image

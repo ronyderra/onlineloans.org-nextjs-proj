@@ -9,6 +9,11 @@
   height: var(--header-height);
 
   background-color: #fff;
+  box-shadow: 0 2px 8px 0 #0000000a;
+
+  @media (width <= 768px) {
+    box-shadow: unset;
+  }
 }
 
 .nav {
@@ -19,13 +24,16 @@
   justify-content: space-between;
 
   width: 100%;
-  max-width: 1680px;
+  max-width: var(--max-container-width);
   height: 100%;
   margin: 0 auto;
   padding: 0 20px;
 
   background: var(--color-white);
-  box-shadow: 0 2px 8px 0 #0000000a;
+
+  @media (width <= 768px) {
+    box-shadow: 0 2px 8px 0 #0000000a;
+  }
 }
 
 .navList {

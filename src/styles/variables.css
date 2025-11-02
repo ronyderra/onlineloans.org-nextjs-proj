@@ -25,6 +25,7 @@
   --color-border: #e2e8f0;
 
   /* sizes */
+  --max-container-width: 1700px;
   --header-height: 88px;
 
   /* 🧱 Layout */

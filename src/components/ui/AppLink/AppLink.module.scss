@@ -29,6 +29,8 @@
 }
 
 .withHover:hover {
+  color: var(--color-secondary);
+
   &::after {
     width: 100%;
   }
