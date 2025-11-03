@@ -1,8 +1,5 @@
-import Image from 'next/image';
+import { LoanTypes } from '@/shared/types';
 
-import { classNames } from '@/shared';
-
-import { LoanTypes } from './types/types';
 import { CreditTabs, Legend, Rating, Reviews } from './components';
 
 import cls from './HomePage.module.scss';

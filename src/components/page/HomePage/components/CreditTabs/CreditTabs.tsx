@@ -3,8 +3,7 @@ import Image from 'next/image';
 import AmountInputCard from '@/components/ui/AmountInput/AmountInput';
 import { AppLink } from '@/components/ui/AppLink/AppLink';
 import { classNames, URL_CONFIG } from '@/shared';
-
-import { LoanTypes } from '../../types/types';
+import { LoanTypes } from '@/shared/types';
 
 import cls from './CreditTabs.module.scss';
 
