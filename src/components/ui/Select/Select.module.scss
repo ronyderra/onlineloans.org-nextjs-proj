@@ -1,0 +1,127 @@
+/* app/components/controlled-select.scss */
+
+$border: #e9eef5; // default field border
+$hover: #93d1b8; // hover border
+$ring: #5cc399; // active/open ring
+$muted: #6b7280; // placeholder
+$bg: #fff; // panel bg
+
+.select {
+  position: relative;
+  width: 100%;
+  max-width: 605px;
+}
+
+.selectBtn {
+  position: relative;
+
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  color: var(--color-gray-5);
+
+  background: $bg;
+  box-shadow: 0 0 12px 0 #00000005;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform-origin: center;
+    transform: translateY(-50%);
+
+    width: 16px;
+    height: 32px;
+
+    background-image: url('/images/icons/features/onlineloans-shevron.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &.active {
+    color: var(--color-primary);
+  }
+
+  &.open {
+    border-color: var(--color-secondary);
+  }
+
+  &.open::after {
+    transform: translateY(-50%) rotate(0);
+    background-image: url('/images/icons/features/onlineloans-shevron-active.svg');
+  }
+
+  &:hover {
+    border-color: var(--color-secondary);
+
+    // &:not(.open)::after {
+    //   transform: translateY(-50%) rotate(-180deg);
+    //   background-image: url('/images/icons/features/onlineloans-shevron-active.svg');
+    // }
+  }
+
+  &:focus-visible {
+    border-color: $ring;
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(92 195 153 / 25%);
+  }
+}
+
+.selectList {
+  position: absolute;
+  z-index: 20;
+
+  overflow: auto;
+
+  width: 100%;
+  max-height: 224px;
+  margin-top: 6px;
+  padding: 4px 0;
+  border: 1px solid $border;
+  border-radius: 8px;
+
+  background: $bg;
+  box-shadow:
+    0 4px 12px rgb(16 24 40 / 8%),
+    0 2px 4px rgb(16 24 40 / 6%);
+}
+
+.selectListItem {
+  cursor: pointer;
+
+  padding: 12px 16px;
+
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-primary);
+
+  transition:
+    background-color 0.12s ease,
+    color 0.12s ease;
+
+  &.isSelectred,
+  &.isActive {
+    background: #5ec1890a;
+  }
+
+  &.isDisabled {
+    cursor: not-allowed;
+    color: #9ca3af;
+  }
+}

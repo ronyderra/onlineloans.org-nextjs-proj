@@ -43,11 +43,7 @@ export const CreditTabs = ({ type }: ICreditTabsProps) => {
           );
         })}
       </ul>
-      <AmountInputCard
-        maxAmountLabel={
-          type === LoanTypes.business ? 'Up to $1M' : 'Up to $50K'
-        }
-      />
+      <AmountInputCard type={type} />
       <div className={cls.creditNotes}>
         <div className={cls.amountInfo}>
           <p className={cls.note}>

@@ -5,4 +5,6 @@ export const URL_CONFIG = {
   about: '/about',
   partner: '/partner-with-us',
   contact: '/contact',
+
+  businessLoan: '/business-loan',
 };

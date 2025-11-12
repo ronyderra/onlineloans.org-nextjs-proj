@@ -2,25 +2,41 @@
 
 import { FocusEvent, useMemo, useState } from 'react';
 
-import { classNames } from '@/shared';
+import { classNames, URL_CONFIG } from '@/shared';
+import { LoanTypes } from '@/shared/types';
+
+import { AppLink } from '../AppLink/AppLink';
 
 import cls from './AmountInput.module.scss';
 
 interface AmountInputCardProps {
-  buttonText?: string;
-  placeholder?: string;
-  maxAmountLabel?: string;
-  onSubmit?: (value: string) => void;
+  // buttonText?: string;
+  // placeholder?: string;
+  // maxAmountLabel?: string;
+  type: LoanTypes;
 }
 
-const AmountCard = ({
-  buttonText = 'See My Offer',
-  placeholder = '$ Amount',
-  maxAmountLabel = 'Up to $50k',
-  onSubmit,
-}: AmountInputCardProps) => {
+const AmountCard = ({ type }: AmountInputCardProps) => {
   const [value, setValue] = useState('');
   const [focused, setFocused] = useState(false);
+  const { buttonText, placeholder, maxAmountLabel, href } = useMemo(() => {
+    if (type === LoanTypes.personal) {
+      return {
+        buttonText: 'See My Offer',
+        placeholder: '$ Amount',
+        maxAmountLabel: 'Up to $50k',
+        href: URL_CONFIG.businessLoan,
+      };
+    }
+
+    return {
+      buttonText: 'See My Offer',
+      placeholder: '$ Amount',
+      maxAmountLabel: 'Up to $1M',
+      href: URL_CONFIG.businessLoan,
+    };
+  }, [type]);
+
   const labelValue = useMemo(() => {
     if (!focused)
       return (
@@ -63,13 +79,16 @@ const AmountCard = ({
           placeholder={focused && !value ? maxAmountLabel : undefined}
         />
       </div>
-      <button
+      {/* <button
         className={cls.button}
         onClick={() => onSubmit?.(value)}
         type="button"
       >
         {buttonText}
-      </button>
+      </button> */}
+      <AppLink className={cls.button} href={href}>
+        {buttonText}
+      </AppLink>
     </div>
   );
 };
