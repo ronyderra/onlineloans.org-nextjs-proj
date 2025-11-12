@@ -116,7 +116,7 @@ export const StepForm = () => {
                               <Input
                                 key={item.placeholder}
                                 name={item.name}
-                                value={formState[item.name]}
+                                value={formState[item.name] ?? ''}
                                 placeholder={item.placeholder}
                                 className={classNames(cls.formInput)}
                                 onChange={(option) =>

@@ -23,7 +23,7 @@ export type Option = {
 type Props = {
   id?: string;
   name: string;
-  value: string | undefined;
+  value?: number | string;
   onChange: (value: string | number, option: Option) => void;
   options: Option[];
   placeholder?: string;
